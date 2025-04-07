@@ -1,6 +1,8 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import { useEffect } from 'react';
+import Dashboard from './pages/Dashboard';
+import UserAccount from './pages/UserAccount';
 
 const ScrollTop = () => {
   const { pathname } = useLocation();
@@ -15,7 +17,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<UserAccount/>} />
+        <Route path="/d" element={<Dashboard/>} />
       </Routes>
     </>
   )
