@@ -6,6 +6,10 @@ function UserAccount() {
   const [headerTitle, setHeaderTitle] = useState('CALQ');
 
   const openModal = () => {
+    if(showModal){
+      closeModal();
+      return;
+    }
     setShowModal(true);
     setActiveForm('social');
     setHeaderTitle('CALQ');
@@ -32,7 +36,6 @@ function UserAccount() {
 
   return (
     <div className="container">
-    
       <button onClick={openModal} className="btn">Account</button>
 
       {showModal && (
@@ -52,7 +55,6 @@ function UserAccount() {
                   </a>
                 </div>
                 
-
                 <div className="centeredText">
                   <span>Or use your Email address</span>
                 </div>
